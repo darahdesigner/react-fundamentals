@@ -12,7 +12,7 @@ const Resources = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="httpos://reacttraining.com/react-router" target="_blank">
+                        <a href="https://reacttraining.com/react-router" target="_blank">
                             React Router Dom
                         </a>
                     </li>
@@ -27,7 +27,7 @@ const Resources = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="https://www.udemy.com/course/react-the-guide-incl-redux" target="_blank">
+                        <a href="https://www.udemy.com/course/react-the-complete-guide-incl-redux" target="_blank">
                             Maximilian Schwarzmüller's Udemy Course
                         </a>
                     </li>
@@ -37,7 +37,7 @@ const Resources = () => {
                         </a>
                     </li>
                     <li>
-                        <a href="gorangajic.github.io/react-icons/fa.html" target="_blank">
+                        <a href="https://gorangajic.github.io/react-icons/fa.html" target="_blank">
                             Font Awesome for React
                         </a>
                     </li>
