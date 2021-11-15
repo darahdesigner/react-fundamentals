@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import PropTypes from 'prop-types';
 
 const PropsDemo = () => {
     const [ color, setColor ] = useState('white');
@@ -67,4 +68,16 @@ const TinyComponent = (props) => {
             <p>The current style is : { props.selectedStyle } </p>
         </div>
     )
+}
+
+FunctionalComponent.defaultProps = {
+    string: 'This is wild!',
+    function: () => console.log('Can I see this in my dev tools?'),
+    selectedStyle : 'what style?'
+}
+
+FunctionalComponent.propTypes = {
+    string: PropTypes.string.isRequired,
+    function: PropTypes.function.isRequired,
+    selectedStyle: PropTypes.string.isRequired
 }
