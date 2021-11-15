@@ -67,17 +67,19 @@ const TinyComponent = (props) => {
         <div>
             <p>The current style is : { props.selectedStyle } </p>
         </div>
-    )
-}
+    );
+};
 
 FunctionalComponent.defaultProps = {
     string: 'This is wild!',
     function: () => console.log('Can I see this in my dev tools?'),
     selectedStyle : 'what style?'
-}
+};
 
 FunctionalComponent.propTypes = {
     string: PropTypes.string.isRequired,
-    function: PropTypes.function.isRequired,
+    function: PropTypes.func.isRequired,
     selectedStyle: PropTypes.string.isRequired
-}
+};
+
+//Revisit, could not figure out where to comment out string, function, and selectedStyle to see defaultProps
