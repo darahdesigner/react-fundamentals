@@ -39,10 +39,10 @@ const PropsDemo = () => {
         <div className='main'>
             <div className='mainDiv'>
                 <div style={styles}>
-                <FunctionalComponent string='will this display?' function={toggleColor} />
-                <FunctionalComponent string='props are pretty cool, right?' function={toggleBackgroundColor} />
-                <FunctionalComponent string='you can send data from one component...' function={toggleBorderRadius} />
-                <FunctionalComponent string='...to another!' function={toggleBorderStyle} />
+                <FunctionalComponent string='will this display?' function={toggleColor} selectedStyle={ color } />
+                <FunctionalComponent string='props are pretty cool, right?' function={toggleBackgroundColor} selectedStyle={ backgroundColor } />
+                <FunctionalComponent string='you can send data from one component...' function={toggleBorderRadius} selectedStyle={ borderRadius } />
+                <FunctionalComponent string='...to another!' function={toggleBorderStyle} selectedStyle={ borderStyle } />
             </div>
         </div>
         </div>
@@ -56,6 +56,15 @@ const FunctionalComponent = (props) => {
         <div>
             <p>{props.string}</p>
             <button onClick={props.function}>Press Me!</button>
+            <TinyComponent selectedStyle={ props.selectedStyle} />
         </div>
     );
 };
+
+const TinyComponent = (props) => {
+    return (
+        <div>
+            <p>The current style is : { props.selectedStyle } </p>
+        </div>
+    )
+}
