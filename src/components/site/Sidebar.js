@@ -4,6 +4,7 @@ import {
     Link,
     Switch
 } from 'react-router-dom';
+import FunctionalComponentDemo from '../concepts/FunctionalComponents/FunctionalComponentDemo';
 import Home from './Home';
 import Resources from './Resources';
 
@@ -22,6 +23,7 @@ const Sidebar = () => {
                     <Route exact path='/home'>Home<Home /></Route>
                     <Route exact path='/resources'><Resources /></Route>
                     <Route exact path='/'><Home /></Route>
+                    <Route exact path='/functionalcomponent'><FunctionalComponentDemo /></Route>
                 </Switch>
             </div>
         </div>
