@@ -1,4 +1,4 @@
-import { getDefaultNormalizer } from '@testing-library/dom';
+// import { getDefaultNormalizer } from '@testing-library/dom';
 import {
     Route,
     Link,
@@ -12,9 +12,10 @@ import State from '../concepts/States'
 import Effects from '../concepts/Effects';
 import PropsDemo from '../concepts/PropsDemo';
 import Hooks from '../concepts/Hooks'
+import TimePiecesApp from '../apps/timer-apps/TimePiecesApp';
 
-const Sidebar = () => {
-    return(
+function Sidebar() {
+    return (
         <div className='sidebar'>
             <div className='sidebar-list-styling'>
                 <ul className='sidebar-list list-unstyled'>
@@ -26,6 +27,7 @@ const Sidebar = () => {
                     <li><Link to='/effects'>Effects</Link></li>
                     <li><Link to='/propsdemo'>Props Demo</Link></li>
                     <li><Link to='/hooks'>Hooks</Link></li>
+                    <li><Link to='/timer'>Timers</Link></li>
                 </ul>
             </div>
             <div className='sidebar-route'>
@@ -39,10 +41,11 @@ const Sidebar = () => {
                     <Route exact path='/effects'><Effects /></Route>
                     <Route exact path='/propsdemo'><PropsDemo /></Route>
                     <Route exact path='/hooks'><Hooks /></Route>
+                    <Route exact path='/timer'><TimePiecesApp /></Route>
                 </Switch>
             </div>
         </div>
     );
-};
+}
 
 export default Sidebar;
