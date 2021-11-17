@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import NytResults from './NytResults';
-
 const baseURL = 'https://api.nytimes.com/svc/search/v2/articlesearch.json';
 const key = '6oNKrDxKLvPNmHUn4AL34EG9kvNW03mc'
 
@@ -52,10 +51,11 @@ const NytApp = () => {
                     <span>Enter an end date: </span>
                     <input type = "date" name ="endDate" pattern="[0-9]{8}" onChange={(e) => setEndDate(e.target.value)} />
                     <button className = "submit">Submit search</button>
-                </form>
+                    </form>
                 {
-                    results.length >0 ? <NytResults results={results} changePage={changePageNumber} /> : null
+                    results.length > 0 ? <NytResults results={results} changePage={changePageNumber} /> : null
                 }
+                
             </div>
         </div>
     );
